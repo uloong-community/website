@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#609191">
+    <title>ULoong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+      margin: 0;
+      --theme-color: #609191;
+      --bg-color: #2d2d2d;
+      --content-max-w: 80rem;
+
+      font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      background-color: var(--bg-color);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    p,
+    li {
+      line-height: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-block: 0.5em;
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-block: 0.5em;
+    }
+
+    header {
+      background-color: var(--theme-color);
+      font-size: 42pt;
+      padding-top: 0.5em;
+      padding-bottom: 0.2em;
+    }
+
+    .header-content {
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+      max-width: var(--content-max-w);
+      display: flex;
+      color: white;
+      align-items: center;
+    }
+
+    .logo {
+      width: 0.8em;
+      margin-right: 0.2em;
+    }
+
+    .main-container {
+      background-color: #f3f3f3;
+      padding-bottom: 2rem;
+      padding-top: 1.5rem;
+    }
+
+    main {
+      display: grid;
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+      max-width: var(--content-max-w);
+    }
+
+    .divider {
+      margin-block: 0.5rem;
+      border-style: solid;
+      border-color: gray;
+      border-width: 1px;
+      height: 0;
+      max-width: var(--content-max-w);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .section-desktop div a {
+      display: block;
+      max-width: fit-content;
+      font-size: 1rem;
+      cursor: not-allowed;
+      color: #8d8d8d;
+      background-color: #ddd;
+      padding: 0.55rem 1rem;
+      margin-block: 1.25rem;
+    }
+
+    .section-desktop .image-container {
+      min-width: 0;
+      min-height: 0;
+      object-fit: contain;
+    }
+
+    .section-desktop .image-container img {
+      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 100 / 60;
+      display: block;
+    }
+
+    @media (min-width: 620px) {
+      .section-grid {
+        grid-template-columns: 1fr 1fr;    
+      }
+    }
+
+    footer {
+      color: white;
+      background-color: var(--bg-color);
+      padding-block: 4rem;
+    }
+    
+    footer > * {
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+      max-width: var(--content-max-w);
+    }
+
+    footer .divider {
+      border-color: rgba(255, 255, 255, 0.1);
+      margin-block: 1em;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-content">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" class="logo">
+          <path
+            fill="currentColor"
+            transform="matrix(0.304661 0.011846 -0.011846 0.304661 619.524 520.66)"
+            d="M -541.87 -66.52 C -2995.61 1661.6 2316.63 -284.32 -611.66 373.26 -3539.95 1030.83 2094.24 518.63 -862.79 5.54 -3819.81 -507.55 1312.48 1872.8 -1223.11 267.16 c -2535.59 -1605.64 1810.57 2016.16 82.44 -437.59 -1728.12 -2453.74 217.79 2858.5 -439.78 -69.79 -657.57 -2928.29 -145.38 2705.9 367.72 -251.12 513.09 -2957.03 -1867.26 2175.26 -261.62 -360.32 1605.64 -2535.59 -2016.16 1810.57 437.59 82.44 2453.74 -1728.12 -2858.5 217.79 69.79 -439.78 2928.29 -657.57 -2705.9 -145.38 251.12 367.72 C 2241.18 -328.2 -2891.11 -2708.55 -355.52 -1102.91 2180.06 502.73 -2166.09 -3119.07 -437.97 -665.32 1290.16 1788.42 -655.76 -3523.82 1.81 -595.53 659.38 2332.76 147.19 -3301.43 -365.9 -344.4 -878.99 2612.62 1501.36 -2519.67 -104.28 15.92 -1709.92 2551.5 1911.88 -1794.65 -541.87 -66.52 Z" />
+        </svg>
+        <span>ULoong</span>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <main>
+        <section class="section-desktop section-grid">
+          <div>
+            <h1>Ubuntu port for LoongArch</h1>
+            <p>ULoong is an Ubuntu port for LoongArch. We hope to release a preview later this year.</p>
+            <a>Download ULoong Desktop</a>
+          </div>
+          <div class="image-container">
+            <img src="/assets/uloong-desktop.png" >
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section-grid">
+          <h2>Repository</h2>
+          <p>
+            The repository is still under active development. You may visit it at <a href="/uloong/">/uloong/</a>.
+          </p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section-grid">
+          <h2>Status</h2>
+          <div>
+            <p>There is still a lot of work ahead:</p>
+            <ul>
+              <li>Dart/Flutter is a blocker for the installer and other desktop applications; Xi Ruoyao is working on it.</li>
+              <li>Work continues on covering the remainder of the main and universe repositories.</li>
+              <li>Cluster and standard Juju-driven automation are under construction; OpenStack support must come first.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div>
+        <div class="divider"></div>
+        <span>2026 ULoong</span>
+      </div>
+    </footer>
+  </body>
+
+</html>
