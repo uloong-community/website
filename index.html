@@ -46,6 +46,20 @@
       margin-block: 0.5em;
     }
 
+    a {
+      color: #69c;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #a679d2;
+    }
+
+    a:hover {
+      text-decoration: underline 1px;
+      text-underline-offset: .075em;
+    }
+
     header {
       background-color: var(--theme-color);
       font-size: 42pt;
@@ -106,6 +120,9 @@
       padding: 0.55rem 1rem;
       margin-block: 1.25rem;
     }
+    .section-desktop div a:hover {
+      text-decoration: none;
+    }
 
     .section-desktop .image-container {
       min-width: 0;
@@ -129,18 +146,30 @@
     footer {
       color: white;
       background-color: var(--bg-color);
-      padding-block: 4rem;
+      padding-top: 4rem;
+      padding-bottom: 1.5rem;
     }
     
-    footer > * {
-      margin-inline: auto;
-      padding-inline: 1.5rem;
-      max-width: var(--content-max-w);
-    }
-
     footer .divider {
       border-color: rgba(255, 255, 255, 0.1);
       margin-block: 1em;
+    }
+
+    .footer-section {
+      margin-inline: auto;
+      padding-inline: 1.5rem;
+      max-width: var(--content-max-w);
+      padding-bottom: 4rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 25% 75%;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5em;
     }
     </style>
   </head>
@@ -197,9 +226,15 @@
     </div>
 
     <footer>
-      <div>
+      <div class="footer-section">
         <div class="divider"></div>
-        <span>2026 ULoong</span>
+        <div class="footer-grid">
+          <span>2026 ULoong</span>
+          <div class="footer-links">
+            <a href="mailto:uloong@loongfans.cn">Email</a>
+            <a href="loongfans.cn">Loongson Hobbyists' Community</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
